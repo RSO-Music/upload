@@ -11,7 +11,7 @@ services:
   image-catalog:
     image: 3978hge3gu/songs:1.0.0-SNAPSHOT-7.1
     ports:
-      - 8080:8080
+      - 8083:8083
     environment:
       KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres.cxpwezylclm2.us-east-1.rds.amazonaws.com:5432/postgres
       KUMULUZEE_CONFIG_ETCD_HOSTS: http://etcd:2379

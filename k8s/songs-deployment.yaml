@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: songs-deployment
+  name: catalog-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: songs
+      app: catalog
   template:
     metadata:
       labels:
-        app: songs
+        app: catalog
     spec:
       containers:
         - image: 3978hge3gu/songs:1.0.0-SNAPSHOT-18.1
-          name: songs
+          name: catalog
           env:
             - name: KUMULUZEE_DISCOVERY_CLUSTER
               value: gcloud
@@ -38,7 +38,7 @@ spec:
                     name: pg-pass
                     key: KUMULUZEE_AWS_SECRET
           ports:
-            - containerPort: 8080
+            - containerPort: 8083
               name: server
               protocol: TCP
           livenessProbe:
@@ -58,12 +58,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: songs
+  name: catalog
 spec:
   type: ClusterIP
   ports:
-    - port: 8080
+    - port: 8083
       protocol: TCP
       targetPort: server
   selector:
-    app: songs
+    app: catalog

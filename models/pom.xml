@@ -19,7 +19,7 @@
 
         <dependency>
             <groupId>si.fri.rso.samples</groupId>
-            <artifactId>upload-lib</artifactId>
+            <artifactId>songs-lib</artifactId>
         </dependency>
 
         <dependency>

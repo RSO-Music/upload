@@ -4,9 +4,9 @@ kumuluzee:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8080
+    base-url: http://localhost:8083
     http:
-      port: 8080
+      port: 8083
   cors-filter:
     servlet:
       allow-generic-http-requests: true
@@ -57,7 +57,7 @@ kumuluzee:
   rest-client:
     registrations:
       - class: image-processing-api
-        url: http://localhost:8080/v1
+        url: http://localhost:8083/v1
         read-timeout: 5000
 #configuration-properties:
 #  comments-service:
