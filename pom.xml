@@ -159,7 +159,7 @@
             </dependency>
             <dependency>
                 <groupId>si.fri.rso.samples</groupId>
-                <artifactId>songs-lib</artifactId>
+                <artifactId>upload-lib</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
